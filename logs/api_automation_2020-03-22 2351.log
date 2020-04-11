@@ -1,0 +1,6 @@
+ Sun, 22 Mar 2020 23:51:47  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Sun, 22 Mar 2020 23:51:47  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 23:51:48  INFO test_login.py test_login [ line:80 ] 预期结果是：{ "code": 200,
+ "msg": "ok"}，实际结果是：{'code': 200, 'msg': 'ok'}，测试通过
+ Sun, 22 Mar 2020 23:51:48  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Sun, 22 Mar 2020 23:51:49  INFO send_email.py send_qq_file_email [ line:77 ] 发送邮件成功

@@ -1,0 +1,30 @@
+ Sun, 22 Mar 2020 21:15:09  INFO tax.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Sun, 22 Mar 2020 21:15:09  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/red-count，请求参数：None
+ Sun, 22 Mar 2020 21:15:10  ERROR tax.py test_login [ line:75 ]  :: {'code': 401, 'msg': '请先登录'} != {'code': 200, 'data': {'message.index': 1}, 'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 401, 'msg': '请先登录'} != {'code': 200, 'msg': 'ok', 'data': {'message.index': 1}}
+- {'code': 401, 'msg': '请先登录'}
++ {'code': 200, 'data': {'message.index': 1}, 'msg': 'ok'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/tax.py", line 72, in test_login
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 401, 'msg': '请先登录'} != {'code': 200, 'data': {'message.index': 1}, 'msg': 'ok'}
+ Sun, 22 Mar 2020 21:15:10  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/tax/422，请求参数：None
+ Sun, 22 Mar 2020 21:15:10  INFO tax.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Sun, 22 Mar 2020 21:15:47  INFO tax.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Sun, 22 Mar 2020 21:15:48  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/red-count，请求参数：None
+ Sun, 22 Mar 2020 21:15:48  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/tax/422，请求参数：None
+ Sun, 22 Mar 2020 21:15:48  INFO tax.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================

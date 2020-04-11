@@ -1,0 +1,62 @@
+ Sun, 29 Mar 2020 21:38:34  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Sun, 29 Mar 2020 21:38:34  INFO http_request.py request [ line:38 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 29 Mar 2020 21:38:34  INFO http_request.py request [ line:42 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/seller-setting/21/edit，请求参数：None
+ Sun, 29 Mar 2020 21:38:35  ERROR test_sellset.py test_sellset [ line:85 ] {'code': 0, 'msg': '数据不存在'} != {'code': 200, 'msg': 'ok', 'data': {'id': 21, 'cus[226 chars]啦啦'}}
+- {'code': 0, 'msg': '数据不存在'}
++ {'code': 200,
++  'data': {'address': '单位地址1',
++           'bank_name': '开户行1',
++           'card_no': '123456',
++           'company_id': 22,
++           'customer_id': 34,
++           'drawer': '开票人1',
++           'duty_paragraph': '12345',
++           'id': 21,
++           'name': '客户022落落零零落落零零落落啦啦啦',
++           'payee': '收款人1',
++           'phone': '15733100728',
++           'reviewer': '复核人1'},
++  'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_sellset.py", line 82, in test_sellset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': '数据不存在'} != {'code': 200, 'msg': 'ok', 'data': {'id': 21, 'cus[226 chars]啦啦'}}
+- {'code': 0, 'msg': '数据不存在'}
++ {'code': 200,
++  'data': {'address': '单位地址1',
++           'bank_name': '开户行1',
++           'card_no': '123456',
++           'company_id': 22,
++           'customer_id': 34,
++           'drawer': '开票人1',
++           'duty_paragraph': '12345',
++           'id': 21,
++           'name': '客户022落落零零落落零零落落啦啦啦',
++           'payee': '收款人1',
++           'phone': '15733100728',
++           'reviewer': '复核人1'},
++  'msg': 'ok'}
+ Sun, 29 Mar 2020 21:38:35  INFO http_request.py request [ line:38 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 29 Mar 2020 21:38:35  INFO http_request.py request [ line:46 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/seller-setting/21，请求参数：{'id': 21, 'customer_id': 34, 'company_id': 22, 'duty_paragraph': '123456666677', 'address': '单位地址16666677', 'phone': '15733100728', 'bank_name': '开户行16666677', 'card_no': '1234566666677', 'payee': '收款人16666677', 'reviewer': '复核人16666677', 'drawer': '开票人16666677', 'name': '客户022落落零零落落零零落落啦啦啦'}
+ Sun, 29 Mar 2020 21:38:35  ERROR test_sellset.py test_sellset [ line:85 ] {'code': 422, 'msg': '请输入出票单位'} != {'code': 200, 'msg': 'ok', 'data': 'true'}
+- {'code': 422, 'msg': '请输入出票单位'}
++ {'code': 200, 'data': 'true', 'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_sellset.py", line 82, in test_sellset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 422, 'msg': '请输入出票单位'} != {'code': 200, 'msg': 'ok', 'data': 'true'}
+- {'code': 422, 'msg': '请输入出票单位'}
++ {'code': 200, 'data': 'true', 'msg': 'ok'}
+ Sun, 29 Mar 2020 21:38:35  INFO test_sellset.py tearDownClass [ line:48 ] ==================== 销售方发票信息测试执行完毕 ====================

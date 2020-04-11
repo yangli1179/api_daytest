@@ -1,0 +1,9 @@
+ Fri, 20 Mar 2020 20:56:43  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Fri, 20 Mar 2020 20:56:43  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Fri, 20 Mar 2020 20:56:43  INFO test_login.py test_login [ line:80 ] 预期结果是：{ "code": 200,
+ "msg": "ok"}，实际结果是：{'code': 200, 'msg': 'ok'}，测试通过
+ Fri, 20 Mar 2020 20:56:44  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Fri, 20 Mar 2020 20:56:44  INFO test_purset.py setUpClass [ line:42 ] ==================== 准备开始执行添加发票信息接口测试 ====================
+ Fri, 20 Mar 2020 20:56:44  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Fri, 20 Mar 2020 20:56:45  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '收票单位名称101', 'duty_paragraph': '1122', 'address': '单位地址', 'phone': '15733100728', 'bank_name': '开户行', 'card_no': '1234'}
+ Fri, 20 Mar 2020 20:56:46  INFO test_purset.py tearDownClass [ line:48 ] ==================== 添加发票信息测试执行完毕 ====================

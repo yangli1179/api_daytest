@@ -1,0 +1,2 @@
+ Fri, 20 Mar 2020 01:07:51  INFO test_purset.py setUpClass [ line:42 ] ==================== 准备开始执行添加发票信息接口测试 ====================
+ Fri, 20 Mar 2020 01:07:51  INFO test_purset.py tearDownClass [ line:49 ] ==================== 添加发票信息测试执行完毕 ====================

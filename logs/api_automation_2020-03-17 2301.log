@@ -1,0 +1,2 @@
+ Tue, 17 Mar 2020 23:01:42  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Tue, 17 Mar 2020 23:01:42  INFO test_login.py tearDownClass [ line:44 ] ==================== 登录接口测试执行完毕 ====================

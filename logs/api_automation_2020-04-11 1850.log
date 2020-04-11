@@ -1,0 +1,2 @@
+ Sat, 11 Apr 2020 18:50:15  INFO test_follow.py setUpClass [ line:41 ] ==================== 准备开始执行关注设计师列表接口测试 ====================
+ Sat, 11 Apr 2020 18:50:16  INFO test_follow.py tearDownClass [ line:47 ] ==================== 关注设计师列表测试执行完毕 ====================

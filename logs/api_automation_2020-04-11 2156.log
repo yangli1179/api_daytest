@@ -1,0 +1,8 @@
+ Sat, 11 Apr 2020 21:56:54  INFO test_follow.py setUpClass [ line:41 ] ==================== 准备开始执行关注设计师列表接口测试 ====================
+ Sat, 11 Apr 2020 21:56:54  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sat, 11 Apr 2020 21:56:54  INFO http_request.py request [ line:38 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/user/getFollowList，请求参数：None
+ Sat, 11 Apr 2020 21:56:54  INFO test_follow.py test_getfollowlist [ line:86 ] 预期结果是：{"code":200,"msg":"success"}，实际结果是：{'code': 200, 'msg': 'success'}，测试通过
+ Sat, 11 Apr 2020 21:56:54  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sat, 11 Apr 2020 21:56:55  INFO http_request.py request [ line:38 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/user/getFollowList，请求参数：None
+ Sat, 11 Apr 2020 21:56:55  INFO test_follow.py test_getfollowlist [ line:86 ] 预期结果是：{"code":200,"msg":"success"}，实际结果是：{'code': 200, 'msg': 'success'}，测试通过
+ Sat, 11 Apr 2020 21:56:55  INFO test_follow.py tearDownClass [ line:47 ] ==================== 关注设计师列表测试执行完毕 ====================

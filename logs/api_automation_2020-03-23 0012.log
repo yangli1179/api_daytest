@@ -1,0 +1,10 @@
+ Mon, 23 Mar 2020 00:12:09  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Mon, 23 Mar 2020 00:12:10  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:12:10  INFO test_sellset.py tearDownClass [ line:47 ] ==================== 销售方发票信息测试执行完毕 ====================
+ Mon, 23 Mar 2020 00:12:40  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Mon, 23 Mar 2020 00:12:41  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:12:41  INFO test_sellset.py tearDownClass [ line:47 ] ==================== 销售方发票信息测试执行完毕 ====================
+ Mon, 23 Mar 2020 00:12:54  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Mon, 23 Mar 2020 00:12:54  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:12:54  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/seller-setting/18，请求参数：{'id': 18, 'customer_id': 34, 'company_id': 22, 'duty_paragraph': '222', 'address': '地址222', 'phone': '15733100728', 'bank_name': '222', 'card_no': '222', 'payee': '222', 'reviewer': '222', 'drawer': '222', 'name': '客户022落落零零落落零零落落啦啦啦'}
+ Mon, 23 Mar 2020 00:12:55  INFO test_sellset.py tearDownClass [ line:47 ] ==================== 销售方发票信息测试执行完毕 ====================

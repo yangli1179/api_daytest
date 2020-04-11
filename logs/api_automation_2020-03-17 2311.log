@@ -1,0 +1,4 @@
+ Tue, 17 Mar 2020 23:11:10  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Tue, 17 Mar 2020 23:11:10  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login，请求参数：{'mobilephone': '13342884220', 'pwd': '123456'}
+ Tue, 17 Mar 2020 23:11:10  INFO test_login.py test_login [ line:72 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"登录成功"}，实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}，测试通过
+ Tue, 17 Mar 2020 23:11:11  INFO test_login.py tearDownClass [ line:44 ] ==================== 登录接口测试执行完毕 ====================

@@ -1,0 +1,32 @@
+ Fri, 20 Mar 2020 20:49:26  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Fri, 20 Mar 2020 20:49:26  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Fri, 20 Mar 2020 20:49:27  INFO test_login.py test_login [ line:80 ] 预期结果是：{ "code": 200,
+ "msg": "ok"}，实际结果是：{'code': 200, 'msg': 'ok'}，测试通过
+ Fri, 20 Mar 2020 20:49:27  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Fri, 20 Mar 2020 20:49:27  INFO test_purset.py setUpClass [ line:42 ] ==================== 准备开始执行添加发票信息接口测试 ====================
+ Fri, 20 Mar 2020 20:49:27  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Fri, 20 Mar 2020 20:49:27  ERROR test_purset.py test_purset [ line:78 ] {'cod[15 chars] 'ok', 'data': {'access_token': 'eyJ0eXAiOiJKV[368 chars]600}} != {'cod[15 chars] 'ok'}
++ {'code': 200, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NzA4NTY3LCJleHAiOjE1ODQ3MTIxNjcsIm5iZiI6MTU4NDcwODU2NywianRpIjoiZk51NlR6eEVYeGROSnpSUiIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.Yql9mGEYb5-RGkM5pA0fVvxChf5sE2bAqRifQsr1uk0',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_purset.py", line 75, in test_purset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'cod[15 chars] 'ok', 'data': {'access_token': 'eyJ0eXAiOiJKV[368 chars]600}} != {'cod[15 chars] 'ok'}
++ {'code': 200, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NzA4NTY3LCJleHAiOjE1ODQ3MTIxNjcsIm5iZiI6MTU4NDcwODU2NywianRpIjoiZk51NlR6eEVYeGROSnpSUiIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.Yql9mGEYb5-RGkM5pA0fVvxChf5sE2bAqRifQsr1uk0',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+ Fri, 20 Mar 2020 20:49:27  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '收票单位名称101', 'duty_paragraph': '1122', 'address': '单位地址', 'phone': '15733100728', 'bank_name': '开户行', 'card_no': '1234'}
+ Fri, 20 Mar 2020 20:49:28  INFO test_purset.py tearDownClass [ line:48 ] ==================== 添加发票信息测试执行完毕 ====================

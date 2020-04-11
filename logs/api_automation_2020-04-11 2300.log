@@ -1,0 +1,5 @@
+ Sat, 11 Apr 2020 23:00:29  INFO test_homepage.py setUpClass [ line:41 ] ==================== 准备开始执行获取个人主页接口测试 ====================
+ Sat, 11 Apr 2020 23:00:29  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sat, 11 Apr 2020 23:00:30  INFO http_request.py request [ line:42 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/User/homepage，请求参数：{'viewUid': '18799', 'viewBid': ''}
+ Sat, 11 Apr 2020 23:00:30  INFO test_homepage.py test_homepage [ line:86 ] 预期结果是：{"code":200,"msg":""}，实际结果是：{'code': 200, 'msg': ''}，测试通过
+ Sat, 11 Apr 2020 23:00:30  INFO test_homepage.py tearDownClass [ line:47 ] ==================== 获取个人主页接口测试执行完毕 ====================

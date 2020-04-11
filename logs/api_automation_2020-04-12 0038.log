@@ -1,0 +1,6 @@
+ Sun, 12 Apr 2020 00:38:07  INFO test_follow.py setUpClass [ line:41 ] ==================== 准备开始执行关注和取消关注设计师接口测试 ====================
+ Sun, 12 Apr 2020 00:38:07  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sun, 12 Apr 2020 00:38:08  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sun, 12 Apr 2020 00:38:08  INFO http_request.py request [ line:42 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/dreamAppV3/User/homepage?viewUid=18799&viewBid=，请求参数：None
+ Sun, 12 Apr 2020 00:38:08  INFO http_request.py request [ line:38 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/user/follow，请求参数：None
+ Sun, 12 Apr 2020 00:38:08  INFO test_follow.py tearDownClass [ line:47 ] ==================== 关注和取消关注设计师测试执行完毕 ====================

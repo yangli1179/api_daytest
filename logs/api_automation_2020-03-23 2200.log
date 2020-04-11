@@ -1,0 +1,6 @@
+ Mon, 23 Mar 2020 22:00:19  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Mon, 23 Mar 2020 22:00:19  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 22:00:42  INFO test_sellset.py tearDownClass [ line:48 ] ==================== 销售方发票信息测试执行完毕 ====================
+ Mon, 23 Mar 2020 22:00:59  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Mon, 23 Mar 2020 22:00:59  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 22:01:00  INFO test_sellset.py tearDownClass [ line:48 ] ==================== 销售方发票信息测试执行完毕 ====================

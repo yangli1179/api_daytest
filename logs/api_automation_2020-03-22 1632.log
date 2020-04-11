@@ -1,0 +1,95 @@
+ Sun, 22 Mar 2020 16:32:16  INFO test_purset.py setUpClass [ line:42 ] ==================== 准备开始执行添加发票信息接口测试 ====================
+ Sun, 22 Mar 2020 16:32:16  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:16  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '8pvxzy', 'duty_paragraph': '1122', 'address': '单位地址', 'phone': '15733100728', 'bank_name': '开户行', 'card_no': '1234'}
+ Sun, 22 Mar 2020 16:32:16  INFO test_purset.py test_purset [ line:87 ] 预期结果是：{'code': 200, 'msg': 'ok', 'data': True}，实际结果是：{'code': 200, 'msg': 'ok', 'data': True}，测试通过
+ Sun, 22 Mar 2020 16:32:16  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:17  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': 'C2zUnB', 'duty_paragraph': '1122', 'address': '单位地址', 'phone': '15733100728', 'bank_name': '开户行', 'card_no': '1234'}
+ Sun, 22 Mar 2020 16:32:17  ERROR test_purset.py test_purset [ line:82 ] {'code': 200, 'msg': 'ok', 'data': True} != {'code': 500, 'msg': '收票单位重复', 'data': ''}
+- {'code': 200, 'data': True, 'msg': 'ok'}
+?          ^            ^^^^          ^^
+
++ {'code': 500, 'data': '', 'msg': '收票单位重复'}
+?          ^            ^^          ^^^^^^
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_purset.py", line 79, in test_purset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 200, 'msg': 'ok', 'data': True} != {'code': 500, 'msg': '收票单位重复', 'data': ''}
+- {'code': 200, 'data': True, 'msg': 'ok'}
+?          ^            ^^^^          ^^
+
++ {'code': 500, 'data': '', 'msg': '收票单位重复'}
+?          ^            ^^          ^^^^^^
+
+ Sun, 22 Mar 2020 16:32:17  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:17  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '', 'duty_paragraph': '333'}
+ Sun, 22 Mar 2020 16:32:17  INFO test_purset.py test_purset [ line:87 ] 预期结果是：{"code":422,"msg":"\u8bf7\u8f93\u5165\u6536\u7968\u5355\u4f4d"}，实际结果是：{'code': 422, 'msg': '请输入收票单位'}，测试通过
+ Sun, 22 Mar 2020 16:32:17  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:18  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': 'C4q39U', 'duty_paragraph': ''}
+ Sun, 22 Mar 2020 16:32:18  ERROR test_purset.py test_purset [ line:82 ] {'code': 200, 'msg': 'ok', 'data': True} != {'code': 422, 'msg': '请输入收票单位'}
+- {'code': 200, 'data': True, 'msg': 'ok'}
++ {'code': 422, 'msg': '请输入收票单位'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_purset.py", line 79, in test_purset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 200, 'msg': 'ok', 'data': True} != {'code': 422, 'msg': '请输入收票单位'}
+- {'code': 200, 'data': True, 'msg': 'ok'}
++ {'code': 422, 'msg': '请输入收票单位'}
+ Sun, 22 Mar 2020 16:32:18  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:18  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': ' ', 'duty_paragraph': '555'}
+ Sun, 22 Mar 2020 16:32:18  INFO test_purset.py test_purset [ line:87 ] 预期结果是：{"code":422,"msg":"\u8bf7\u8f93\u5165\u6536\u7968\u5355\u4f4d"}，实际结果是：{'code': 422, 'msg': '请输入收票单位'}，测试通过
+ Sun, 22 Mar 2020 16:32:18  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:19  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '# name', 'duty_paragraph': ' '}
+ Sun, 22 Mar 2020 16:32:19  ERROR test_purset.py test_purset [ line:82 ] {'code': 200, 'msg': 'ok', 'data': True} != {'code': 422, 'msg': '请输入收票单位'}
+- {'code': 200, 'data': True, 'msg': 'ok'}
++ {'code': 422, 'msg': '请输入收票单位'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_purset.py", line 79, in test_purset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 200, 'msg': 'ok', 'data': True} != {'code': 422, 'msg': '请输入收票单位'}
+- {'code': 200, 'data': True, 'msg': 'ok'}
++ {'code': 422, 'msg': '请输入收票单位'}
+ Sun, 22 Mar 2020 16:32:19  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:19  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '# name', 'duty_paragraph': ' 777'}
+ Sun, 22 Mar 2020 16:32:19  ERROR test_purset.py test_purset [ line:82 ] {'code': 500, 'msg': '收票单位重复', 'data': ''} != {'code': 200, 'msg': 'ok', 'data': True}
+- {'code': 500, 'data': '', 'msg': '收票单位重复'}
+?          ^            ^^          ^^^^^^
+
++ {'code': 200, 'data': True, 'msg': 'ok'}
+?          ^            ^^^^          ^^
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_purset.py", line 79, in test_purset
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 500, 'msg': '收票单位重复', 'data': ''} != {'code': 200, 'msg': 'ok', 'data': True}
+- {'code': 500, 'data': '', 'msg': '收票单位重复'}
+?          ^            ^^          ^^^^^^
+
++ {'code': 200, 'data': True, 'msg': 'ok'}
+?          ^            ^^^^          ^^
+
+ Sun, 22 Mar 2020 16:32:19  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Sun, 22 Mar 2020 16:32:20  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': 'HgE464', 'duty_paragraph': '888', 'address': '单位地址', 'phone': '15733100728', 'bank_name': '开户行', 'card_no': '1234'}
+ Sun, 22 Mar 2020 16:32:20  INFO test_purset.py tearDownClass [ line:48 ] ==================== 添加发票信息测试执行完毕 ====================

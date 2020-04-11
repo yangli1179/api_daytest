@@ -1,0 +1,4 @@
+ Thu, 19 Mar 2020 23:44:36  INFO test_purset.py setUpClass [ line:41 ] ==================== 准备开始执行添加发票信息接口测试 ====================
+ Thu, 19 Mar 2020 23:44:37  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Thu, 19 Mar 2020 23:44:37  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/purchaser-setting，请求参数：{'name': '收票单位名称101', 'duty_paragraph': '1122', 'address': '单位地址', 'phone': '15733100728', 'bank_name': '开户行', 'card_no': '1234'}
+ Thu, 19 Mar 2020 23:44:37  INFO test_purset.py tearDownClass [ line:48 ] ==================== 添加发票信息测试执行完毕 ====================

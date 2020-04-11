@@ -1,0 +1,28 @@
+ Sun, 12 Apr 2020 01:05:55  INFO test_isfollow.py setUpClass [ line:41 ] ==================== 准备开始执行关注和取消关注设计师接口测试 ====================
+ Sun, 12 Apr 2020 01:05:55  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sun, 12 Apr 2020 01:05:56  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sun, 12 Apr 2020 01:05:56  INFO http_request.py request [ line:42 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/dreamAppV3/User/homepage?viewUid=18799&viewBid=，请求参数：None
+ Sun, 12 Apr 2020 01:05:56  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/user/follow，请求参数：{"followUid":"18799"}
+ Sun, 12 Apr 2020 01:05:56  ERROR test_isfollow.py test_isfollow [ line:90 ]  :: {'code': 11513003, 'data': [], 'msg': '关注失败'} != {'code': 200, 'data': True, 'msg': 'success'}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 11513003, 'msg': '关注失败', 'data': []} != {'code': 200, 'msg': 'success', 'data': True}
+- {'code': 11513003, 'data': [], 'msg': '关注失败'}
++ {'code': 200, 'data': True, 'msg': 'success'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_daytest/test_cases/test_isfollow.py", line 87, in test_isfollow
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 11513003, 'data': [], 'msg': '关注失败'} != {'code': 200, 'data': True, 'msg': 'success'}
+ Sun, 12 Apr 2020 01:05:56  INFO test_isfollow.py tearDownClass [ line:47 ] ==================== 关注和取消关注设计师测试执行完毕 ====================

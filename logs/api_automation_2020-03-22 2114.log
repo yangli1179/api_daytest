@@ -1,0 +1,4 @@
+ Sun, 22 Mar 2020 21:14:51  INFO tax.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Sun, 22 Mar 2020 21:14:52  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/red-count，请求参数：None
+ Sun, 22 Mar 2020 21:14:52  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/tax/422，请求参数：None
+ Sun, 22 Mar 2020 21:14:52  INFO tax.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================

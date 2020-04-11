@@ -1,0 +1,57 @@
+ Sat, 11 Apr 2020 18:53:36  INFO test_follow.py setUpClass [ line:41 ] ==================== 准备开始执行关注设计师列表接口测试 ====================
+ Sat, 11 Apr 2020 18:53:37  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sat, 11 Apr 2020 18:53:37  INFO http_request.py request [ line:38 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/user/getFollowList?page=1&size=10"，请求参数：None
+ Sat, 11 Apr 2020 18:53:37  ERROR test_follow.py test_follow [ line:79 ]  :: {'code': 200,
+ 'data': {'count': 2,
+          'data': [{'avatar': 'https://resources.mydaydream.com/image/2018/12/26/92907ecf41adef0bb97a5dd3149a8606.jpg',
+                    'intro': '一个生长在自然里的人，度过几年的城市生活，也难以放下对自然的牵挂。',
+                    'isDesigner': True,
+                    'isFollow': True,
+                    'nickname': '大大卷',
+                    'scheme': 'daydreamapp://userCenter/783',
+                    'uid': '783'},
+                   {'avatar': 'https://resources.mydaydream.com/image/2018/11/20/855aa755421da041cd4f03f8c4d2efe8.jpg',
+                    'intro': '他是贝加尔湖无所不能的巴神，能带你看到贝加尔湖可爱又真实的样子。',
+                    'isDesigner': True,
+                    'isFollow': True,
+                    'nickname': '巴沙',
+                    'scheme': 'daydreamapp://userCenter/700',
+                    'uid': '700'}]},
+ 'msg': 'success'} != {'code': 200, 'msg': 'success'}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'cod[20 chars]cess', 'data': {'data': [{'uid': '783', 'nickn[507 chars]: 2}} != {'cod[20 chars]cess'}
+Diff is 923 characters long. Set self.maxDiff to None to see it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_daytest/test_cases/test_follow.py", line 76, in test_follow
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 200,
+ 'data': {'count': 2,
+          'data': [{'avatar': 'https://resources.mydaydream.com/image/2018/12/26/92907ecf41adef0bb97a5dd3149a8606.jpg',
+                    'intro': '一个生长在自然里的人，度过几年的城市生活，也难以放下对自然的牵挂。',
+                    'isDesigner': True,
+                    'isFollow': True,
+                    'nickname': '大大卷',
+                    'scheme': 'daydreamapp://userCenter/783',
+                    'uid': '783'},
+                   {'avatar': 'https://resources.mydaydream.com/image/2018/11/20/855aa755421da041cd4f03f8c4d2efe8.jpg',
+                    'intro': '他是贝加尔湖无所不能的巴神，能带你看到贝加尔湖可爱又真实的样子。',
+                    'isDesigner': True,
+                    'isFollow': True,
+                    'nickname': '巴沙',
+                    'scheme': 'daydreamapp://userCenter/700',
+                    'uid': '700'}]},
+ 'msg': 'success'} != {'code': 200, 'msg': 'success'}
+ Sat, 11 Apr 2020 18:53:37  INFO test_follow.py tearDownClass [ line:47 ] ==================== 关注设计师列表测试执行完毕 ====================

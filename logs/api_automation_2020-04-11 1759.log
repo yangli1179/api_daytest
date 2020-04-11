@@ -1,0 +1,82 @@
+ Sat, 11 Apr 2020 17:59:37  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Sat, 11 Apr 2020 17:59:37  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:37  INFO test_login.py test_login [ line:80 ] 预期结果是：{"code": 200, "msg": "success"}，实际结果是：{'code': 200, 'msg': 'success'}，测试通过
+ Sat, 11 Apr 2020 17:59:37  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '1573310072', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:37  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10002, 'msg': '手机号不正确'}，实际结果是：{'code': 10002, 'msg': '手机号不正确'}，测试通过
+ Sat, 11 Apr 2020 17:59:37  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:37  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:37  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '', 'mobilePhone': '1573310072', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:37  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:38  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': ' ', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:38  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:38  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': ' ', 'mobilePhone': '1573310072', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:38  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:38  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728', 'nationCode': '87'}
+ Sat, 11 Apr 2020 17:59:38  ERROR test_login.py test_login [ line:75 ]  :: {'code': 200, 'msg': 'success'} != {'code': 10001, 'msg': '数据异常'}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 200, 'msg': 'success'} != {'code': 10001, 'msg': '数据异常'}
+- {'code': 200, 'msg': 'success'}
+?          ^            ^^^^^^^
+
++ {'code': 10001, 'msg': '数据异常'}
+?          ^  ++          ^^^^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_daytest/test_cases/test_login.py", line 72, in test_login
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 200, 'msg': 'success'} != {'code': 10001, 'msg': '数据异常'}
+ Sat, 11 Apr 2020 17:59:38  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Sat, 11 Apr 2020 17:59:58  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Sat, 11 Apr 2020 17:59:58  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:58  INFO test_login.py test_login [ line:80 ] 预期结果是：{"code": 200, "msg": "success"}，实际结果是：{'code': 200, 'msg': 'success'}，测试通过
+ Sat, 11 Apr 2020 17:59:59  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '1573310072', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:59  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10002, 'msg': '手机号不正确'}，实际结果是：{'code': 10002, 'msg': '手机号不正确'}，测试通过
+ Sat, 11 Apr 2020 17:59:59  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:59  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:59  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '', 'mobilePhone': '1573310072', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:59  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:59  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': ' ', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:59  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:59  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': ' ', 'mobilePhone': '1573310072', 'nationCode': '86'}
+ Sat, 11 Apr 2020 17:59:59  INFO test_login.py test_login [ line:80 ] 预期结果是：{'code': 10001, 'msg': '数据异常'}，实际结果是：{'code': 10001, 'msg': '数据异常'}，测试通过
+ Sat, 11 Apr 2020 17:59:59  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://www.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728', 'nationCode': ''}
+ Sat, 11 Apr 2020 17:59:59  ERROR test_login.py test_login [ line:75 ]  :: {'code': 200, 'msg': 'success'} != {'code': 10001, 'msg': '数据异常'}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 200, 'msg': 'success'} != {'code': 10001, 'msg': '数据异常'}
+- {'code': 200, 'msg': 'success'}
+?          ^            ^^^^^^^
+
++ {'code': 10001, 'msg': '数据异常'}
+?          ^  ++          ^^^^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_daytest/test_cases/test_login.py", line 72, in test_login
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 200, 'msg': 'success'} != {'code': 10001, 'msg': '数据异常'}
+ Sat, 11 Apr 2020 18:00:00  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================

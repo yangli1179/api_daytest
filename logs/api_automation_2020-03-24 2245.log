@@ -1,0 +1,1 @@
+ Tue, 24 Mar 2020 22:45:20  INFO http_request.py request [ line:74 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/seller-setting/18，请求参数：{'id': 18, 'customer_id': 34, 'company_id': 22, 'duty_paragraph': '222', 'address': '地址222', 'phone': '15733100728', 'bank_name': '222', 'card_no': '222', 'payee': '222', 'reviewer': '222', 'drawer': '222', 'name': '客户022落落零零落落零零落落啦啦啦'}

@@ -1,0 +1,30 @@
+ Sat, 11 Apr 2020 22:26:21  INFO test_homepage.py setUpClass [ line:41 ] ==================== 准备开始执行获取个人主页接口测试 ====================
+ Sat, 11 Apr 2020 22:26:21  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sat, 11 Apr 2020 22:26:21  INFO http_request.py request [ line:42 ] 正在发送请求，请求地址：https://www.mydaydream.com/dreamAppV3/User/homepage，请求参数：{"viewUid": "18799", "viewBid": ""}
+ Sat, 11 Apr 2020 22:26:21  ERROR test_homepage.py test_homepage [ line:81 ]  :: {'code': 10001, 'msg': '参数异常'} != {'code': 200, 'msg': ''}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 10001, 'msg': '参数异常'} != {'code': 200, 'msg': ''}
+- {'code': 10001, 'msg': '参数异常'}
+?          ^  --          ----
+
++ {'code': 200, 'msg': ''}
+?          ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_daytest/test_cases/test_homepage.py", line 78, in test_homepage
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 10001, 'msg': '参数异常'} != {'code': 200, 'msg': ''}
+ Sat, 11 Apr 2020 22:26:21  INFO test_homepage.py tearDownClass [ line:47 ] ==================== 获取个人主页接口测试执行完毕 ====================

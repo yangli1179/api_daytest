@@ -1,0 +1,1 @@
+ Sat, 11 Apr 2020 18:33:44  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'phone': '15733100728', 'code': '123456'}

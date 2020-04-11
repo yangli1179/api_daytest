@@ -1,0 +1,89 @@
+ Wed, 18 Mar 2020 22:35:00  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Wed, 18 Mar 2020 22:35:01  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Wed, 18 Mar 2020 22:35:01  ERROR test_login.py test_login [ line:71 ]  :: {'code': 200,
+ 'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTAxLCJleHAiOjE1ODQ1NDU3MDEsIm5iZiI6MTU4NDU0MjEwMSwianRpIjoiUEh2cnJtZkE2Z3J1cDRQcCIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.7MZ06u1HzCCvyaSXQMKp33-sgAwn4SizUcYtXh0jQmI',
+          'expires_in': 3600,
+          'token_type': 'bearer'},
+ 'msg': 'ok'} != {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'cod[27 chars]': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciO[356 chars]600}} != {'cod[27 chars]': {'token_type': 'bearer', 'expires_in': 3600}}
++ {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTAxLCJleHAiOjE1ODQ1NDU3MDEsIm5iZiI6MTU4NDU0MjEwMSwianRpIjoiUEh2cnJtZkE2Z3J1cDRQcCIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.7MZ06u1HzCCvyaSXQMKp33-sgAwn4SizUcYtXh0jQmI',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_login.py", line 68, in test_login
+    self.assertEqual(res, eval(case.expected_data))
+  File "/Applications/software/PyCharm.app/Contents/helpers/pycharm/teamcity/diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'code': 200,
+ 'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTAxLCJleHAiOjE1ODQ1NDU3MDEsIm5iZiI6MTU4NDU0MjEwMSwianRpIjoiUEh2cnJtZkE2Z3J1cDRQcCIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.7MZ06u1HzCCvyaSXQMKp33-sgAwn4SizUcYtXh0jQmI',
+          'expires_in': 3600,
+          'token_type': 'bearer'},
+ 'msg': 'ok'} != {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+ Wed, 18 Mar 2020 22:35:01  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Wed, 18 Mar 2020 22:35:40  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Wed, 18 Mar 2020 22:35:40  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Wed, 18 Mar 2020 22:35:41  ERROR test_login.py test_login [ line:71 ] {'cod[27 chars]': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciO[356 chars]600}} != {'cod[27 chars]': {'token_type': 'bearer', 'expires_in': 3600}}
++ {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTQxLCJleHAiOjE1ODQ1NDU3NDEsIm5iZiI6MTU4NDU0MjE0MSwianRpIjoicEV1SDhXT203NEFFcngyYyIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.oXXkkrsiwjTiDvGPLjy9V9b2tBIodpZqDm-UjEztjzg',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_login.py", line 68, in test_login
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'cod[27 chars]': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciO[356 chars]600}} != {'cod[27 chars]': {'token_type': 'bearer', 'expires_in': 3600}}
++ {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTQxLCJleHAiOjE1ODQ1NDU3NDEsIm5iZiI6MTU4NDU0MjE0MSwianRpIjoicEV1SDhXT203NEFFcngyYyIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.oXXkkrsiwjTiDvGPLjy9V9b2tBIodpZqDm-UjEztjzg',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+ Wed, 18 Mar 2020 22:35:41  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Wed, 18 Mar 2020 22:35:51  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Wed, 18 Mar 2020 22:35:51  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Wed, 18 Mar 2020 22:35:51  ERROR test_login.py test_login [ line:71 ] {'cod[27 chars]': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciO[356 chars]600}} != {'cod[27 chars]': {'token_type': 'bearer', 'expires_in': 3600}}
++ {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTUxLCJleHAiOjE1ODQ1NDU3NTEsIm5iZiI6MTU4NDU0MjE1MSwianRpIjoiTHZuSENDSXoyQUpqeXpWSSIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.4Bq12qFra9zPUO2K-PZhA6wQQRcIx4Dkob-HVze4GPE',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+Traceback (most recent call last):
+  File "/Users/yangli/PycharmProjects/api_fsctest/test_cases/test_login.py", line 68, in test_login
+    self.assertEqual(res, eval(case.expected_data))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'cod[27 chars]': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciO[356 chars]600}} != {'cod[27 chars]': {'token_type': 'bearer', 'expires_in': 3600}}
++ {'code': 200, 'data': {'expires_in': 3600, 'token_type': 'bearer'}, 'msg': 'ok'}
+- {'code': 200,
+-  'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZnNjLXRlc3QubWFuc2hhbmcuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTg0NTQyMTUxLCJleHAiOjE1ODQ1NDU3NTEsIm5iZiI6MTU4NDU0MjE1MSwianRpIjoiTHZuSENDSXoyQUpqeXpWSSIsInN1YiI6NTEsInBydiI6Ijg2ODA4N2IxODNiMzdhNjk0OTQ4MDBjYTAxNjIyNGNhYjVjYTRiYzMifQ.4Bq12qFra9zPUO2K-PZhA6wQQRcIx4Dkob-HVze4GPE',
+-           'expires_in': 3600,
+-           'token_type': 'bearer'},
+-  'msg': 'ok'}
+ Wed, 18 Mar 2020 22:35:52  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================

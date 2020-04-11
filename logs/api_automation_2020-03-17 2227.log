@@ -1,0 +1,3 @@
+ Tue, 17 Mar 2020 22:27:34  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login，请求参数：{'mobilephone': '13342884220', 'pwd': '123456'}
+ Tue, 17 Mar 2020 22:27:34  DEBUG connectionpool.py _new_conn [ line:225 ] Starting new HTTP connection (1): 118.24.221.133:8081
+ Tue, 17 Mar 2020 22:27:34  DEBUG connectionpool.py _make_request [ line:437 ] http://118.24.221.133:8081 "POST /futureloan/mvc/api/member/login HTTP/1.1" 200 None

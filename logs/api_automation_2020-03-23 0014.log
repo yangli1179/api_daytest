@@ -1,0 +1,18 @@
+ Mon, 23 Mar 2020 00:14:15  INFO test_login.py setUpClass [ line:39 ] ==================== 准备开始执行登录接口测试 ====================
+ Mon, 23 Mar 2020 00:14:15  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:14:15  INFO test_login.py test_login [ line:80 ] 预期结果是：{ "code": 200,
+ "msg": "ok"}，实际结果是：{'code': 200, 'msg': 'ok'}，测试通过
+ Mon, 23 Mar 2020 00:14:16  INFO test_login.py tearDownClass [ line:45 ] ==================== 登录接口测试执行完毕 ====================
+ Mon, 23 Mar 2020 00:14:16  INFO test_sellset.py setUpClass [ line:41 ] ==================== 准备开始执行销售方发票信息接口测试 ====================
+ Mon, 23 Mar 2020 00:14:16  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:14:16  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/seller-setting/18，请求参数：{'id': 18, 'customer_id': 34, 'company_id': 22, 'duty_paragraph': '222', 'address': '地址222', 'phone': '15733100728', 'bank_name': '222', 'card_no': '222', 'payee': '222', 'reviewer': '222', 'drawer': '222', 'name': '客户022落落零零落落零零落落啦啦啦'}
+ Mon, 23 Mar 2020 00:14:16  INFO test_sellset.py tearDownClass [ line:47 ] ==================== 销售方发票信息测试执行完毕 ====================
+ Mon, 23 Mar 2020 00:14:16  INFO test_tax.py setUpClass [ line:40 ] ==================== 准备开始执行编辑接口测试 ====================
+ Mon, 23 Mar 2020 00:14:16  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:14:17  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/red-count，请求参数：None
+ Mon, 23 Mar 2020 00:14:17  INFO test_tax.py test_edit_tax [ line:85 ] 预期结果是：{'code': 200, 'msg': 'ok'}，实际结果是：{'code': 200, 'msg': 'ok'}，测试通过
+ Mon, 23 Mar 2020 00:14:17  INFO http_request.py request [ line:39 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/auth/login，请求参数：{'phone': '15733100728', 'code': '123456'}
+ Mon, 23 Mar 2020 00:14:17  INFO http_request.py request [ line:43 ] 正在发送请求，请求地址：https://fsc-test.manshang.com/api/tax/422，请求参数：None
+ Mon, 23 Mar 2020 00:14:17  INFO test_tax.py test_edit_tax [ line:85 ] 预期结果是：{ "code": 200,  "msg": "ok"}，实际结果是：{'code': 200, 'msg': 'ok'}，测试通过
+ Mon, 23 Mar 2020 00:14:18  INFO test_tax.py tearDownClass [ line:46 ] ==================== 编辑报税测试执行完毕 ====================
+ Mon, 23 Mar 2020 00:14:18  INFO send_email.py send_qq_file_email [ line:77 ] 发送邮件成功

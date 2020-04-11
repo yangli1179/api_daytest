@@ -1,0 +1,2 @@
+ Sat, 11 Apr 2020 21:55:43  INFO http_request.py request [ line:34 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/passport/passportv2/mobilePhoneLogin，请求参数：{'code': '123456', 'mobilePhone': '15733100728'}
+ Sat, 11 Apr 2020 21:55:43  INFO http_request.py request [ line:42 ] 正在发送请求，请求地址：https://api.b.mydaydream.com/dreamAppV3/user/getFollowList，请求参数：{'page': 1, 'size': '10'}
