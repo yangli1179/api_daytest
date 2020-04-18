@@ -88,3 +88,4 @@ class GetFollowListTestCase(unittest.TestCase):
         finally:
             self.wb.write_data(self.row, 11, str(res))
             self.wb.write_data(self.row, 12, result)
+

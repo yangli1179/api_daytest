@@ -24,10 +24,8 @@ from common.http_request import HTTPRequest
 from common.execute_mysql import ExecuteMsql
 from common.tools import get_token, get_isfollow
 
-
 # 从配置文件获取数据
 file_name = conf.get("excel", "file_name")
-
 
 
 @ddt
@@ -47,7 +45,6 @@ class IsFollow(unittest.TestCase):
         logging.info("==================== 关注和取消关注设计师测试执行完毕 ====================")
         cls.request.close()
 
-
     @data(*cases)
     def test_isfollow(self, case):
         # 拼接url
@@ -64,7 +61,7 @@ class IsFollow(unittest.TestCase):
 
         # 将True和False转换，获取期望结果
         if isfollow:
-            case.expected_data = case.expected_data.replace("#isfollpw", "False")
+            case.expected_data = case.expected_data.replace("#isfollow", "False")
         else:
             case.expected_data = case.expected_data.replace("#isfollow", "True")
 
@@ -82,6 +79,8 @@ class IsFollow(unittest.TestCase):
         res1 = response.json()
         res = {'code': res1['code'], 'msg': res1['msg'], 'data': res1['data']}
 
+        result = ""
+
         try:
             self.assertEqual(res, eval(case.expected_data))
         except AssertionError as e:
@@ -96,3 +95,4 @@ class IsFollow(unittest.TestCase):
         finally:
             self.wb.write_data(self.row, 11, str(res))
             self.wb.write_data(self.row, 12, result)
+

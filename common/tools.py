@@ -46,6 +46,7 @@ def rand_name():
         name += s
     return name
 
+
 # 获取分页总数
 def get_pagenum(total, pagesize):
     num = (total + pagesize - 1)//pagesize
@@ -57,38 +58,41 @@ def get_followuid():
     request = HTTPRequest()
     method = "get"
     url = "https://api.b.mydaydream.com/dreamAppV3/user/getFollowList"
-    params = {"page": 1, "size": "10"}
+    # params = {"page": 1, "size": "20"}
+    params = {"size": "20"}
     token = get_token(phone="15733100728", pwd="123456")
     headers = {'x-access-token': token}
     response0 = request.request(method=method, url=url, params=params, headers=headers)
     res1 = response0.json()
+    print(res1)
+    data_list = []
+    for data in res1["data"]["data"]:
+        data_list.append(data["uid"])
+    print(data_list)
 
     # 获取关注用户总数量
-    count = res1['data']['count']
+    # count = res1['data']['count']
 
     # 获取总页数
-    page = get_pagenum(count, 10)
-    print(page)
-    uid = []
-    for i in range(0, count):
-        res = res1['data']['data'][i]['uid']
-        uid.append(res)
-    return uid, count
+    # page = get_pagenum(count, 10)
+    # print(page)
+    # uid = []
+    # for i in range(0, count):
+    #     res = res1['data']['data'][i]['uid']
+    #     uid.append(res)
+    # return uid, count
+
 
 # 获取个人主页是否关注
 def get_isfollow():
     request = HTTPRequest()
-    method = "get"
     url = "https://api.b.mydaydream.com/dreamAppV3/User/homepage?viewUid=18799&viewBid="
     token = get_token(phone="15733100728", pwd="123456")
     headers = {'x-access-token': token}
-    response = request.request(method=method, url=url, headers=headers)
+    response = request.request(method="get", url=url, headers=headers)
     res = response.json()
     isFollow = res['data']['isFollow']
     return isFollow
-
-
-
 
 
 if __name__ == '__main__':
@@ -96,10 +100,12 @@ if __name__ == '__main__':
     # print(token)
     # name = rand_name()
     # print(name)
-    # a = get_followuid()
-    # print(a)
-    b = get_isfollow()
-    print(b)
+    a = get_followuid()
+    print(a)
+    # b = get_isfollow()
+    # print(b)
+    # print(type(b))
+
 
 
 
